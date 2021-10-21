@@ -1,0 +1,21 @@
+    1  ls
+    2  node app.js
+    3  npm init
+    4  node app.js
+    5  npm init
+    6  npm install express --save
+    7  npm instal express
+    8  node app.js
+
+Что такое express?
+    https://expressjs.com/ru/starter/installing.html
+    https://expressjs.com/ru/starter/hello-world.html
+
+Что такое CORS?
+    https://webdevblog.ru/chto-takoe-cors/
+
+    
+    https://www.npmjs.com/package/socket.io
+    https://www.npmjs.com/package/nodemon
+
+

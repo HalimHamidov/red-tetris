@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanalei&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oxanium";
+}
+
+body {
+    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("./img/room19.jpeg");
+    /* background-image: url("./img/room19.jpeg"); */
+    width: 100vh;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(255, 251, 0);
+    overflow: hidden;
+}
+
+audio {
+    display: none;
+}
+
+.App {
+    text-align: center;
+}
+
+h1 {
+    color: #f02f3fec;
+    font-family: 'Festive', cursive;
+    font-size: xxx-large;
+    text-shadow: white 1px 0 10px;
+    text-align: center;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+td,
+tr,
+th {
+    text-align: center;
+    padding: 8px;
+    width: auto;
+    color: #dddddd;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-sa {
+    justify-content: space-around;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.red-tetris__col-stage>aside {
+    display: flex !important;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sound-icon-wrapper {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px !important;
+    height: 102px;
+}
+
+.sound-icon {
+    margin: 11px;
+}
+
+.sound-icon:hover {
+    color: white;
+}
+
+.spectersWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .sound-icon-wrapper {
+        width: 100px !important;
+        height: 102px;
+    }
+    .red-tetris__col-stage>aside {
+        width: 120px !important;
+    }
+    .spectersWrapper {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sound-icon-wrapper {
+        width: 100px !important;
+        height: 60px;
+    }
+    .red-tetris__col-stage>aside {
+        width: 100px !important;
+    }
+}
