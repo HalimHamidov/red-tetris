@@ -38,7 +38,7 @@ export const usePlayer = (dispatch, roomState) => {
           sym = 1;
           break;
         }
-      sym === 1
+      sym == 1
         ? (clonedPlayer.tetromino = [
           ["I", "I", "I", "I"],
           [0, 0, 0, 0],

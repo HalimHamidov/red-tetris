@@ -10,6 +10,12 @@ export const StyleStage = styled.div`
   background: #111;
   width: 518px;
   height: 1024px;
+  @media screen and (min-width: 2048px) {
+    grid-template-rows: repeat(20, calc(299px / 10));
+    grid-template-columns: repeat(10, calc(602px / 20));
+    width: 320px;
+    height: 624px;
+  }
   @media screen and (max-width: 768px) {
     grid-template-rows: repeat(20, calc(299px / 10));
     grid-template-columns: repeat(10, calc(602px / 20));
@@ -52,7 +58,7 @@ export const StyledOverlayText = styled.div`
   -ms-transform: translate(-50%,-50%);
   h1 {
     color: white;
-    font-family: "Oxanium";
+    font-family: "Lato";
     font-size: xxx-large;
     text-shadow: none;
     text-align: center;
@@ -61,11 +67,24 @@ export const StyledOverlayText = styled.div`
     letter-spacing: 3px;
   }
   p {
+
+  }
+  @media screen and (min-width: 2048px) {
+    h1 {
+      color: white;
+      font-family: "Lato";
+      font-size: xxx-large;
+      text-shadow: none;
+      text-align: center;
+      font-weight: bolder;
+      padding: 50px 0px 50px;
+      letter-spacing: 3px;
+    }
   }
   @media screen and (max-width: 768px) {
     h1 {
       color: white;
-      font-family: "Oxanium";
+      font-family: "Lato";
       font-size: xxx-large;
       text-shadow: none;
       text-align: center;
@@ -77,7 +96,7 @@ export const StyledOverlayText = styled.div`
   @media screen and (max-width: 480px) {
     h1 {
       color: white;
-      font-family: "Oxanium";
+      font-family: "Lato";
       font-size: xxx-large;
       text-shadow: none;
       text-align: center;

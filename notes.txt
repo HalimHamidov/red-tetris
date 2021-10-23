@@ -1,0 +1,6 @@
+https://developer.mozilla.org/ru/docs/Web/Manifest
+
+media-screen and max-width min-width
+https://www.w3schools.com/cssref/css3_pr_mediaquery.asp
+
+https://www.textcompare.org/

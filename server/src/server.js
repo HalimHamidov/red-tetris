@@ -2,7 +2,8 @@ const express = require("express");
 const http = require("http");
 const cors = require("cors");
 const helpers = require("./helpers");
-const Game = require("./Game");
+const GameJoin = require("./GameJoin");
+const GameLeave = require("./GameLeave");
 const Player = require("./Player");
 const Pieces = require("./Pieces");
 
@@ -19,7 +20,8 @@ class Server {
       })
     );
     this.http = http.Server(this.app);
-    var gameInst = new Game();
+    var gamej = new GameJoin();
+    var gamel= new GameLeave();
     var playerInst = new Player();
     var piecesInst = new Pieces();
     var io = require("socket.io")(this.http, {
@@ -30,13 +32,13 @@ class Server {
     });
     io.on("connection", function (socket) {
       socket.on("disconnect", (sk) => {
-        gameInst.leaveRoom(socket, Players, io, Rooms).then((res) => {
+        gamel.leaveRoom(socket, Players, io, Rooms).then((res) => {
           Players = res.Players;
           Rooms = res.Rooms;
         });
       });
       socket.on("leaveRoom", (sk) => {
-        gameInst.leaveRoom(socket, Players, io, Rooms).then((res) => {
+        gamel.leaveRoom(socket, Players, io, Rooms).then((res) => {
           Players = res.Players;
           Rooms = res.Rooms;
         });
@@ -80,7 +82,7 @@ class Server {
           helpers.validateName(data.user) &&
           helpers.validateName(data.room)
         ) {
-          gameInst.joinRoom(socket, data, io, Rooms, Players).then((r) => {
+          gamej.joinRoom(socket, data, io, Rooms, Players).then((r) => {
             Players = r.Players;
             Rooms = r.Rooms;
           });
@@ -114,3 +116,4 @@ class Server {
 }
 const server = new Server();
 server.listen();
+

@@ -18,6 +18,10 @@ export const Styledisplay = styled.div`
   justify-content: center;
   align-items: center;
   padding-top: 20px;
+  @media screen and (min-width: 2048px) {
+    width: 100px;
+    height: 102px;
+  }
   @media screen and (max-width: 768px) {
     width: 100px;
     height: 102px;
@@ -42,6 +46,10 @@ export const StyledNextDisplay = styled.div`
   position: relative;
   width: 150px;
   height: 132px;
+  @media screen and (min-width: 2048px) {
+    width: 100px;
+    height: 102px;
+  }
   @media screen and (max-width: 768px) {
     width: 100px;
     height: 102px;
@@ -63,6 +71,10 @@ export const StyledTitle = styled.div`
   font-size: 0.8 rem;
   color: white;
   transform: translate(-50%, -50%);
+    @media screen and (min-width: 480px) {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
   @media screen and (max-width: 480px) {
     font-size: 12px;
     padding: 5px 10px;
@@ -74,6 +86,9 @@ export const StyledData = styled.div`
   padding: 6px;
   font-size: 0.8 rem;
   color: white;
+  @media screen and (min-width: 2048px) {
+    font-size: 30px;
+  }
   @media screen and (max-width: 480px) {
     font-size: 30px;
   }
@@ -85,6 +100,13 @@ export const StyleStage = styled.div`
   grid-template-columns: repeat(4, calc(130px / 4));
   grid-gap: 1px;
   padding: 10px;
+  @media screen and (min-width: 2048px) {
+    display: grid;
+    grid-template-rows: repeat( 3, calc(130px / 4));
+    grid-template-columns: repeat(4, calc(130px / 4));
+    grid-gap: 1px;
+    padding: 10px;
+  }
   @media screen and (max-width: 768px) {
     display: grid;
     grid-template-rows: repeat( 3, calc(130px / 4));
@@ -100,3 +122,4 @@ export const StyleStage = styled.div`
     padding: 10px;
   }
 `;
+

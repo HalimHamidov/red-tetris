@@ -14,6 +14,9 @@ font-size: 24px;
 ::placeholder {
   color: #fff;
 }
+@media screen and (min-width: 2048px) {
+  font-size: 20px;
+}
 @media screen and (max-width: 768px) {
   font-size: 18px;
 }
@@ -36,13 +39,20 @@ min-width: 160px;
 :hover {
   background: #333;
 }
+@media screen and (min-width: 2048px) {
+  font-size: 18px;
+  min-width: 135px;
+
+}
 @media screen and (max-width: 768px) {
   font-size: 18px;
   min-width: 135px;
+
 }
 @media screen and (max-width: 480px) {
   font-size: 16px;
   min-width: 135px;
+
 }
 `;
 export const StyledAddnameWrapper = styled.form.attrs({
@@ -59,6 +69,8 @@ export const StyledAddnameWrapper = styled.form.attrs({
   width: 50%;
   padding: 10px;
   transform: translate(-50%, -50%);
+  @media screen and (min-width: 2048px) {
+  }
   @media screen and (max-width: 768px) {
   }
   @media screen and (max-width: 480px) {
@@ -75,6 +87,8 @@ top: 30%;
 left: 50%;
 position: absolute;
 transform: translate(-50%, -30%);
+@media screen and (min-width: 2048px) {
+}
 @media screen and (max-width: 768px) {
 }
 @media screen and (max-width: 480px) {
@@ -86,8 +100,11 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+
 margin: auto;
 padding: 10px;
+@media screen and (min-width: 2048px) {
+}
 @media screen and (max-width: 768px) {
 }
 @media screen and (max-width: 480px) {
@@ -97,6 +114,9 @@ padding: 10px;
 export const InputsWrapper = styled.div`
 display: flex;
 align-items: center;
+@media screen and (min-width: 2048px) {
+  flex-direction: column;
+}
 @media screen and (max-width: 768px) {
   flex-direction: column;
 }
@@ -116,6 +136,11 @@ outline: none;
 width: 15%;
 min-width: 160px;
 font-size: 24px;
+@media screen and (min-width: 2048px) {
+  font-size: 18px;
+  width: 95%;
+  padding: 15px;
+}
 @media screen and (max-width: 768px) {
   font-size: 18px;
   width: 95%;
@@ -137,6 +162,9 @@ border-spacing: 0;
 width: 50%;
 border: 1px solid #333;
 font-size: 18px;
+@media screen and (min-width: 2048px) {
+  width: 60%;
+}
 @media screen and (max-width: 768px) {
   width: 80%;
 }
@@ -166,10 +194,14 @@ border-radius: 10px;
 border: 4px solid #333;
 color: #000;
 background: #fff;
+
 cursor: pointer;
 margin: 0.5em;
+
+
 :hover {
   background: #333;
   color: #fff;
 }
+
 `

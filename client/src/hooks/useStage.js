@@ -3,7 +3,14 @@ import { Createstage } from "../gameHelper";
 import { socket } from "./socket";
 
 export const useStage = (
-  player,  NextPlayer,   resetPlayer,   gameOver,   user,   room,   players,   nextPiece
+  player,
+  NextPlayer,
+  resetPlayer,
+  gameOver,
+  user,
+  room,
+  players,
+  nextPiece
 ) => {
   const [stage, setStage] = useState(Createstage());
   const [stageNext, setStageNext] = useState(Createstage(4, 4));

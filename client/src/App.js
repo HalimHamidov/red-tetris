@@ -1,6 +1,6 @@
 import React from "react";
 import AddName from "./Components/AddName";
-import Tetris from "./Components/MultiPlayer";
+import Tetris from "./Components/Multiplayer";
 import Rooms from "./Components/Rooms";
 import { useDispatch, useSelector } from "react-redux";
 import { ToastContainer } from "react-toastify";

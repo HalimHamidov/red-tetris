@@ -1,20 +1,22 @@
-import {useEffect, useRef} from 'react';
- //acc to Making setInterval Declarative with React Hooks- Dan Abramov
-export function useInterval(callback, delay) {
-    const savedCallback = useRef();
-    useEffect(() => {
-        savedCallback.current = callback;
-    }, [callback]);
+import { useEffect, useRef } from "react";
 
-    useEffect(() => {
-        function tick() {
-            savedCallback.current();
-        }
-        if (delay !== null) {
-            const id = setInterval(tick, delay);
-            return () => {
-                clearInterval(id);
-            };
-        }
-    }, [delay]);
+export function useInterval(callback, delay) {
+  const savedCallback = useRef();
+  // Remember the latest callback.
+  useEffect(() => {
+    savedCallback.current = callback;
+  }, [callback]);
+
+  // Set up the interval.
+  useEffect(() => {
+    function tick() {
+      savedCallback.current();
+    }
+    if (delay !== null) {
+      const id = setInterval(tick, delay);
+      return () => {
+        clearInterval(id);
+      };
+    }
+  }, [delay]);
 }

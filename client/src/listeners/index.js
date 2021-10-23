@@ -30,7 +30,7 @@ export const stethoscope = (dispatch, getState) => {
   });
   socket.on("Stage", (rs) => {
     for (let i = 0; i < rs.players.length; i++) {
-      if (rs.user === rs.players[i].user) {
+      if (rs.user == rs.players[i].user) {
         rs.players[i] = {
           user: rs.user,
           score: rs.players[i].score,
