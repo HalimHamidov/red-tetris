@@ -7,12 +7,7 @@ import { useStage, usePlayer, useInterval, socket } from "../hooks";
 import { useGameStatus } from "../hooks/useGameStatus";
 import url from "../img/tetriminos.mp3";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faVolumeMute,
-  faVolumeUp,
-  faRedoAlt,
-  faPlay,
-} from "@fortawesome/free-solid-svg-icons";
+import { faVolumeMute, faVolumeUp, faRedoAlt, faPlay,} from "@fortawesome/free-solid-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
 import StagePlayers from "./StagePlayers";
 import NextPiece from "./NextPiece";
@@ -44,21 +39,13 @@ const Tetris = () => {
   const [player, NextPlayer, updatePlayerPos, resetPlayer, playerRotate] =
     usePlayer(dispatch, roomState, roomState);
 
-  const [stage, stageNext, setStage, rowsCleared] = useStage(
-    player,
-    NextPlayer,
-    resetPlayer,
-    roomState.gameOver,
-    playerState.username,
-    roomState.name,
-    playersState,
-    roomState.next_piece
+  const [stage, stageNext, setStage, linesCompleted] = useStage(
+    player, NextPlayer, resetPlayer, roomState.gameOver, playerState.username, roomState.name,
+    playersState, roomState.next_piece
   );
 
   const [score, setScore, rows, setRows, level, setLevel] = useGameStatus(
-    rowsCleared,
-    roomState.name,
-    playerState.username
+    linesCompleted, roomState.name, playerState.username
   );
 
   const movePlayer = (dir) => {
@@ -174,6 +161,10 @@ const Tetris = () => {
         if (player.tetromino[0][1] != "D") 
           playerRotate(stage, 1);
       } 
+      else if (keyCode === 83) {
+        if (player.tetromino[0][1] != "D") 
+          playerRotate(stage, -1);
+      } 
       else if (keyCode === 32) 
         verticalDrop();
     }
@@ -185,11 +176,9 @@ const Tetris = () => {
 
   return (
     <StyledtetrisWrapper
-      data-testid="styled-tet-wra"
-      role="button"
-      tabIndex="0"
-      onKeyDown={move}
-      onKeyUp={(event) => {
+      data-testid="styled-tet-wra" role="button" tabIndex="0"
+      onKeyDown={move} onKeyUp={(event) => 
+      {
         event.preventDefault();
         keyUp(event);
       }}
@@ -283,7 +272,7 @@ const Tetris = () => {
                               }
                               user={row.user}
                               score={row.score}
-                              rows={row.rowsCleared}
+                              rows={row.linesCompleted}
                             />
                           </Col>
                         ) : (

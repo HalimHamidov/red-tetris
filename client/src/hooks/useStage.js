@@ -4,18 +4,11 @@ import { socket } from "./socket";
 // import { Tetrominos } from "../tetrominos";
 
 export const useStage = (
-  player,
-  NextPlayer,
-  resetPlayer,
-  gameOver,
-  user,
-  room,
-  players,
-  nextPiece
-) => {
+  player, NextPlayer, resetPlayer, gameOver, user, room,
+  players, nextPiece) => {
   const [stage, setStage] = useState(Createstage());
   const [stageNext, setStageNext] = useState(Createstage(4, 4));
-  const [rowsCleared, setRowsCleared] = useState(0);
+  const [linesCompleted, setRowsCleared] = useState(0);
   useEffect(() => {
     setRowsCleared(0);
     const sweepRows = (newStage) =>
@@ -30,12 +23,12 @@ export const useStage = (
       }, []);
 
     const updateStage = (prevStage) => {
-      //Flush the stage
+      //First Flush the stage - playing field
       const newStage = prevStage.map((row) =>
         row.map((cell) => (cell[1] === "clear" ? [0, "clear"] : cell))
       );
 
-      //draw tetromino
+      //Then draw the tetromino
       player.tetromino.forEach((row, y) => {
         row.forEach((value, x) => {
           if (value !== 0) {
@@ -46,7 +39,7 @@ export const useStage = (
           }
         });
       });
-
+      // Then check if we got some score if collided
       if (player.collided && !gameOver) {
         resetPlayer(newStage);
         setStageNext(Createstage(4, 4));
@@ -73,9 +66,9 @@ export const useStage = (
         });
       });
     } else setStageNext(Createstage(4, 4))
-
+  // Here are the updates
     setStage((prev) => updateStage(prev));
   }, [player]);
 
-  return [stage, stageNext, setStage, rowsCleared];
+  return [stage, stageNext, setStage, linesCompleted];
 };

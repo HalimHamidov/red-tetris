@@ -1,6 +1,6 @@
 import React from "react";
 import url from "../img/Gameover.jpeg";
-import url1 from "../img/WOZ.png";
+import url1 from "../img/Tetris-Founder.png";
 import { StyledOverlay, StyledOverlayText } from "./styling/StyledStage";
 
 export default function GameOver({ player }) {
@@ -12,11 +12,11 @@ export default function GameOver({ player }) {
         ) : (
           <img data-testid="gameOver-Won-img" style={{ width: "288px" }} src={url1} />
         )}
-        <h1>{player?.lost === true ? "You lost" : "You Won"}</h1>
+        <h1>{player?.lost === true ? "You lost! Try HARD!" : "You Win! Congratulations! "}</h1>
         <p>
           {player?.admin === true
-            ? "Click on ⟳ to restart the game"
-            : "Wait for host player to restart the game"}
+            ? "Restart the game"
+            : "Wait for host to restart the game"}
         </p>
       </StyledOverlayText>
     </StyledOverlay>

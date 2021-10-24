@@ -16,7 +16,7 @@ const AddName = () => {
     else {
       setUserName("")
       toast.error(
-        "[ERROR] Player and Room names must be 1 to 12 alphanumeric characters in length"
+        "Please Enter correct 1 to 12 characters in length player and room names"
       );
     }
   }
