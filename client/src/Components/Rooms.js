@@ -2,21 +2,8 @@ import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  StyledButton,
-  StyledInput,
-  RoomWrapper,
-  StyledSelect,
-  InputsWrapper,
-  FormWrapper,
-  TABLE,
-  THEAD,
-  TR,
-  TD,
-  TBODY,
-  TH,
-  JoinButton,
-} from "./styling/StyledForm";
+import {StyledButton, StyledInput, RoomWrapper,  StyledSelect, InputsWrapper, FormWrapper,
+  TABLE, THEAD, TR, TD, TBODY, TH, JoinButton } from "./styling/StyledForm";
 import { UPDATE_MODE } from "../actions/roomAction";
 
 const Rooms = () => {
@@ -57,21 +44,21 @@ const Rooms = () => {
       <FormWrapper>
         <InputsWrapper>
           <StyledInput
-            placeholder="Enter Room name"
+            placeholder="Type your Room Name"
             onChange={(e) => setRoomname(e.target.value)}
           />
           <StyledSelect value={mode} onChange={(e) => setMode(e.target.value)}>
             <option>Solo</option>
-            <option>Multiplayer</option>
+            <option>Multi-Player</option>
           </StyledSelect>
         </InputsWrapper>
-        <StyledButton type="submit">Submit</StyledButton>
+        <StyledButton type="submit">START</StyledButton>
       </FormWrapper>
       {rooms.length > 0 && (
         <TABLE>
           <THEAD>
             <TR>
-              <TH>Room Name</TH>
+              <TH>Room-Name</TH>
               <TH>Members</TH>
               <TH>Mode</TH>
               <TH></TH>

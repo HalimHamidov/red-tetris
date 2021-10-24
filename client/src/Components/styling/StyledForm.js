@@ -1,18 +1,16 @@
 import styled from "styled-components"
 
 export const StyledInput = styled.input`
-padding: 15px;
-border-radius: 10px;
-border: 4px solid #333;
-color: #fff;
-background: #000;
-margin: 0.5em;
-outline: none;
+padding: 18px;
+border-radius: 8px;
+border: 2px solid #8e7cc3;
+color: #e06666;
+background: #fff;
 width: 60%;
-min-width: 300px;
-font-size: 24px;
+min-width: 288px;
+font-size: 21px;
 ::placeholder {
-  color: #fff;
+  color: #6aa84f;
 }
 @media screen and (min-width: 2048px) {
   font-size: 20px;
@@ -26,18 +24,17 @@ font-size: 24px;
 `;
 
 export const StyledButton = styled.button`
-padding: 12px;
-border-radius: 10px;
-border: 4px solid #333;
-color: #ffffff;
-background: #000;
+padding: 8px;
+border-radius: 8px;
+border: 8px groove #6aa84f;
+color: #FF0000;
+background: #9fc5e8;
 font-size: 24px;
-cursor: pointer;
-margin: 0.5em;
-width: 20%;
+margin: 0.8em;
+width: 8%;
 min-width: 160px;
 :hover {
-  background: #333;
+  background: #ffe599;
 }
 @media screen and (min-width: 2048px) {
   font-size: 18px;
@@ -126,16 +123,16 @@ align-items: center;
 `
 
 export const StyledSelect = styled.select`
-padding: 21px;
-border-radius: 10px;
-border: 4px solid #333;
-color: #fff;
+padding: 16px;
+border-radius: 8px;
+border: 4px ridge #333;
+color: #f9cb9c;
 background: #000;
 margin: 0.5em;
 outline: none;
-width: 15%;
-min-width: 160px;
-font-size: 24px;
+width: 25%;
+min-width: 188px;
+font-size: 22px;
 @media screen and (min-width: 2048px) {
   font-size: 18px;
   width: 95%;
