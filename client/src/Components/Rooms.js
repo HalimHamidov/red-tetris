@@ -23,7 +23,7 @@ const Rooms = () => {
     } else {
       setRoomname("");
       toast.error(
-        "[ERROR] Player and Room names must be 1 to 12 alphanumeric characters in length"
+        "Please enter 12 characters in length correct Player and Room names"
       );
     }
   }

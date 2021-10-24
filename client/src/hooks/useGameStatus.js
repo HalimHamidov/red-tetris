@@ -15,7 +15,7 @@ export const useGameStatus = (rowsCleared, room, user) => {
       audio2.play();
       socket.emit("new score", {
         user: user,
-        score: score + linePoints[rowsCleared - 1] * (level + 1),
+        score: score + linePoints[rowsCleared - 1] * (level-1),
         room: room,
       });
     }
@@ -25,3 +25,5 @@ export const useGameStatus = (rowsCleared, room, user) => {
   }, [calcScore, rowsCleared, score]);
   return [score, setScore, rows, setRows, level, setLevel];
 };
+
+

@@ -11,6 +11,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { socket } from "./hooks";
 
 function App() {
+  
   let State = useSelector((state) => {
     return state;
   });
@@ -29,13 +30,10 @@ function App() {
         Red Tetris
       </h1>
       <ToastContainer />
-      {State.player.username === "" ? (
-        <AddName />
-      ) : State.room.name === "" ? (
-        <Rooms />
-      ) : (
-        <Tetris />
-      )}
+      {
+      State.player.username === 
+        "" ? (<AddName />) : State.room.name === "" ? (<Rooms />) : (<Tetris />)
+      }
     </div>
   );
 }

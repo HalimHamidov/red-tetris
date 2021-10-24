@@ -123,17 +123,21 @@ const Tetris = () => {
       }
       updatePlayerPos({ x: 0, y: 0, collided: true });
     }
-    if (rows > level + 1) {
+    // Increase level when player has cleared 10 rows
+    if (rows > (level + 1) * 10) {
       setLevel((prev) => prev + 1);
-
-      if (level > 0) setDropTime(1000 / level + 1 * 10);
+    // Also increase speed
+      if (level > 0) 
+        setDropTime(1000 / (level + 1) + 200);
     }
   };
 
   const keyUp = ({ keyCode }) => {
     if (!roomState.gameOver && keyCode === 40) {
-      if (level == 0) setDropTime(1000);
-      else setDropTime(dropTime);
+      if (level == 0) 
+        setDropTime(1000);
+      else 
+        setDropTime(dropTime);
     }
   };
 
@@ -160,12 +164,18 @@ const Tetris = () => {
 
   const move = ({ keyCode }) => {
     if (!roomState.gameOver) {
-      if (keyCode === 37) movePlayer(-1);
-      else if (keyCode === 39) movePlayer(1);
-      else if (keyCode === 40) dropPlayer();
+      if (keyCode === 37) 
+        movePlayer(-1);
+      else if (keyCode === 39) 
+        movePlayer(1);
+      else if (keyCode === 40) 
+        dropPlayer();
       else if (keyCode === 38) {
-        if (player.tetromino[0][1] != "D") playerRotate(stage, 1);
-      } else if (keyCode === 32) verticalDrop();
+        if (player.tetromino[0][1] != "D") 
+          playerRotate(stage, 1);
+      } 
+      else if (keyCode === 32) 
+        verticalDrop();
     }
   };
 
@@ -201,6 +211,7 @@ const Tetris = () => {
                 <NextPiece nextPiece={roomState.next_piece} stage={stageNext} />
                 <Display title={"Score"} data={score} />
                 <Display title={"Level"} data={level} />
+                <Display title={"Rows"} data={rows} />
                 <div
                   style={{
                     cursor: "pointer",
@@ -272,6 +283,7 @@ const Tetris = () => {
                               }
                               user={row.user}
                               score={row.score}
+                              rows={row.rowsCleared}
                             />
                           </Col>
                         ) : (

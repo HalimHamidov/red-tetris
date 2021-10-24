@@ -25,7 +25,7 @@ class Server {
     var playerInst = new Player();
     var piecesInst = new Pieces();
     var io = require("socket.io")(this.http, {
-      pingInterval: 60000,
+      pingInterval: 880000,
       cors: {
         origin: "*",
       },
