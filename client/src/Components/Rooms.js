@@ -1,9 +1,23 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
-import {StyledButton, StyledInput, RoomWrapper,  StyledSelect, InputsWrapper, FormWrapper,
-  TABLE, THEAD, TR, TD, TBODY, TH, JoinButton } from "./styling/StyledForm";
+import {
+  StyledButton,
+  StyledInput,
+  RoomWrapper,
+  StyledSelect,
+  InputsWrapper,
+  FormWrapper,
+  TABLE,
+  THEAD,
+  TR,
+  TD,
+  TBODY,
+  TH,
+  JoinButton,
+} from "./styling/StyledForm";
 import { UPDATE_MODE } from "../actions/roomAction";
 
 const Rooms = () => {
@@ -29,11 +43,9 @@ const Rooms = () => {
   }
 
   useEffect(() => {
-    axios
-      .get(`${process.env.REACT_APP_API_URL}/getRooms`)
-      .then((res) => {
-        setRooms([...res.data]);
-      })
+    axios.get(`${process.env.REACT_APP_API_URL}/getRooms`).then((res) => {
+      setRooms([...res.data]);
+    });
     return () => {
       setRooms([]);
     };
@@ -46,49 +58,51 @@ const Rooms = () => {
           <StyledInput
             placeholder="Type your Room Name"
             onChange={(e) => setRoomname(e.target.value)}
-          />
+          />{" "}
           <StyledSelect value={mode} onChange={(e) => setMode(e.target.value)}>
-            <option>Solo</option>
-            <option>Multi-Player</option>
-          </StyledSelect>
-        </InputsWrapper>
-        <StyledButton type="submit">START</StyledButton>
-      </FormWrapper>
+            <option> Solo </option> <option> Multi - Player </option>{" "}
+          </StyledSelect>{" "}
+        </InputsWrapper>{" "}
+        <StyledButton type="submit"> START </StyledButton>{" "}
+      </FormWrapper>{" "}
       {rooms.length > 0 && (
         <TABLE>
           <THEAD>
             <TR>
-              <TH>Room-Name</TH>
-              <TH>Members</TH>
-              <TH>Mode</TH>
-              <TH></TH>
-            </TR>
-          </THEAD>
+              <TH> Room - Name </TH> <TH> Members </TH> <TH> Mode </TH>{" "}
+              <TH> </TH>{" "}
+            </TR>{" "}
+          </THEAD>{" "}
           <TBODY>
+            {" "}
             {rooms.map(
               (item, i) =>
                 item.room.length > 0 && (
                   <TR key={i}>
                     <TD>
-                      <strong>{item.room}</strong>
+                      <strong> {item.room} </strong>{" "}
+                    </TD>{" "}
+                    <TD>
+                      {" "}
+                      {item.members}
+                      /5
                     </TD>
-                    <TD>{item.members}/5</TD>
-                    <TD>{item.mode}</TD>
+                    <TD> {item.mode} </TD>{" "}
                     <TD>
                       <JoinButton
                         onClick={() =>
                           (window.location = `${process.env.REACT_APP_FRONTEND_URL}/#${item.room}[${playerState.username}]`)
                         }
                       >
-                        Join
-                      </JoinButton>
-                    </TD>
+                        Join{" "}
+                      </JoinButton>{" "}
+                    </TD>{" "}
                   </TR>
                 )
-            )}
-          </TBODY>
+            )}{" "}
+          </TBODY>{" "}
         </TABLE>
-      )}
+      )}{" "}
     </RoomWrapper>
   );
 };

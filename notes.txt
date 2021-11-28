@@ -4,3 +4,5 @@ media-screen and max-width min-width
 https://www.w3schools.com/cssref/css3_pr_mediaquery.asp
 
 https://www.textcompare.org/
+
+https://www.npmjs.com/package/jest

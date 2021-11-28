@@ -1,6 +1,6 @@
 import React from "react";
 import AddName from "./Components/AddName";
-import Tetris from "./Components/Multiplayer";
+import Tetris from "./Components/MultiPlayer";
 import Rooms from "./Components/Rooms";
 import { useDispatch, useSelector } from "react-redux";
 import { ToastContainer } from "react-toastify";
@@ -10,7 +10,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { socket } from "./hooks";
 
 function App() {
-  
   let State = useSelector((state) => {
     return state;
   });
@@ -22,17 +21,20 @@ function App() {
         onClick={() => {
           socket.emit("leaveRoom");
           dispatch({ type: "RESET_STATE" });
-          window.location.hash = ""
-        }
-        }
-        style={{ cursor: "pointer" }}>
-        Red Tetris
-      </h1>
-      <ToastContainer />
-      {
-      State.player.username === 
-        "" ? (<AddName />) : State.room.name === "" ? (<Rooms />) : (<Tetris />)
-      }
+          window.location.hash = "";
+        }}
+        style={{ cursor: "pointer" }}
+      >
+        Red Tetris{" "}
+      </h1>{" "}
+      <ToastContainer />{" "}
+      {State.player.username === "" ? (
+        <AddName />
+      ) : State.room.name === "" ? (
+        <Rooms />
+      ) : (
+        <Tetris />
+      )}{" "}
     </div>
   );
 }

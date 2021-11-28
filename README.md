@@ -43,6 +43,10 @@ _________________________________________________
 
 https://reactrouter.com/web/guides/quick-start
 
+
+npm run test
+npm test -- --coverage 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
