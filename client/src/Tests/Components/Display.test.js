@@ -5,4 +5,4 @@ test("Test Display", () => {
   render(
           <Display />
   );
-});
+}); 

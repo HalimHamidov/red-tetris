@@ -8,6 +8,6 @@ test("Test AddName", () => {
   render(
     <Provider store={store}> 
           <AddName />
-    </Provider>
+    </Provider> 
   );
-});
+}); 

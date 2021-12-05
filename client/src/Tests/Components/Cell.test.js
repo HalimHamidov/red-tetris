@@ -5,4 +5,4 @@ test("Test Cell", () => {
   render(
     <Cell />
   );
-});
+}); 
