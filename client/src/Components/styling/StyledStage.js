@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
-export const StyleStage = styled.div`
+export const StyleStage = styled.div `
   position: relative;
   display: grid;
-  grid-template-rows: repeat(20, calc(499px / 10));
-  grid-template-columns: repeat(10, calc(1002px / 20));
+  grid-template-rows: repeat(20, calc(499px / 20));
+  grid-template-columns: repeat(10, calc(1002px / 40));
   grid-gap: 1px;
-  border: 4px solid #333;
-  background: #111;
-  width: 518px;
-  height: 1024px;
+  border: 4px solid #DC143C;
+  background: #777;
+  width: 518px/2;
+  height: 1024px/2;
   @media screen and (min-width: 2048px) {
     grid-template-rows: repeat(20, calc(299px / 10));
     grid-template-columns: repeat(10, calc(602px / 20));
@@ -30,7 +30,7 @@ export const StyleStage = styled.div`
   }
 `;
 
-export const StyledOverlay = styled.div`
+export const StyledOverlay = styled.div `
   position: absolute;
   width: 100%;
   height: 100%;
@@ -44,7 +44,7 @@ export const StyledOverlay = styled.div`
   opacity: 0.9;
 `
 
-export const StyledOverlayText = styled.div`
+export const StyledOverlayText = styled.div `
   position: absolute;
   top: 50%;
   left: 50%;
@@ -107,6 +107,6 @@ export const StyledOverlayText = styled.div`
     }
   }
 `
-export const StyledSpecter = styled.div`
+export const StyledSpecter = styled.div `
   text-align: center;  
 `

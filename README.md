@@ -45,7 +45,8 @@ https://reactrouter.com/web/guides/quick-start
 
 
 npm run test
-npm test -- --coverage 
+q
+
 
 # Getting Started with Create React App
 
