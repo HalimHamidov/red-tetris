@@ -34,7 +34,7 @@ describe("App", () => {
     );
     const button = screen.getByText("Red Tetris");
     fireEvent.click(button);
-    expect(screen.getByPlaceholderText(/Enter Room name/));
+    expect(screen.getByPlaceholderText(/Type your Room Name/));
   });
   test("should render Tetris component if username and room are set", () => {
     const store = mockStore({

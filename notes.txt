@@ -16,3 +16,11 @@ SpreadElement[Yield] :
 ... AssignmentExpression[In, ?Yield]
 BindingRestElement[Yield] :
 ... BindingIdentifier[?Yield]
+
+
+    "jest": {
+        "collectCoverageFrom": [
+            "!src/hooks/**",
+            "!src/listeners/**"
+        ]
+    },

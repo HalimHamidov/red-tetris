@@ -21,7 +21,7 @@ https://github.com/FortAwesome/Font-Awesome/tree/master/js-packages/%40fortaweso
 
 http://blogs.longwin.com.tw/lifetype/key_codes.html
 
-
+./node_modules/.bin/jest --watchAll
 
 
 
@@ -45,8 +45,9 @@ https://reactrouter.com/web/guides/quick-start
 
 
 npm run test
-q
-
+npm test
+./node_modules/.bin/jest --watchAll
+npm install -g jest
 
 # Getting Started with Create React App
 

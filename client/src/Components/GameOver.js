@@ -8,9 +8,9 @@ export default function GameOver({ player }) {
     <StyledOverlay>
       <StyledOverlayText>
         {player?.lost === true ? (
-          <img data-testid="gameOver-Lost-img" style={{ width: "288px" }} src={url} />
+          <img data-testid="gameOver-Lost-img" style={{ width: "255px" }} src={url} />
         ) : (
-          <img data-testid="gameOver-Won-img" style={{ width: "288px" }} src={url1} />
+          <img data-testid="gameOver-Won-img" style={{ width: "255px" }} src={url1} />
         )}
         <h1>{player?.lost === true ? "You lost! Try HARD!" : "You Win! Congratulations! "}</h1>
         <p>
