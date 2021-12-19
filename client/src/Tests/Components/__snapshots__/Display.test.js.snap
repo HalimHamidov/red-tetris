@@ -2,7 +2,7 @@
 
 exports[`Test Display rendering 1`] = `
 <div
-  className="sc-bdvvtL drkjAg"
+  className="sc-bdvvtL epyCWs"
 >
   <div
     className="sc-dkPtRN fdlklY"
@@ -15,7 +15,7 @@ exports[`Test Display rendering 1`] = `
 
 exports[`Test Display title rendering 1`] = `
 <div
-  className="sc-bdvvtL fHKrPZ"
+  className="sc-bdvvtL gQorsJ"
 >
   <div
     className="sc-dkPtRN fdlklY"

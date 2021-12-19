@@ -1,5 +1,5 @@
 import renderer from "react-test-renderer";
-import Rooms from "../..Components/Rooms";
+import Rooms from "../../Components/Rooms";
 import store from "../../Store";
 import { Provider } from "react-redux";
 import * as reactRedux from "react-redux";

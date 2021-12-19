@@ -59,7 +59,7 @@ export const StyledOverlayText = styled.div `
   h1 {
     color: white;
     font-family: "Lato";
-    font-size: xxx-large;
+    font-size: 18px;
     text-shadow: none;
     text-align: center;
     font-weight: bolder;
@@ -73,7 +73,7 @@ export const StyledOverlayText = styled.div `
     h1 {
       color: white;
       font-family: "Lato";
-      font-size: xxx-large;
+      font-size: 18px;
       text-shadow: none;
       text-align: center;
       font-weight: bolder;
@@ -85,7 +85,7 @@ export const StyledOverlayText = styled.div `
     h1 {
       color: white;
       font-family: "Lato";
-      font-size: xxx-large;
+      font-size: 18px;
       text-shadow: none;
       text-align: center;
       font-weight: bolder;
@@ -97,7 +97,7 @@ export const StyledOverlayText = styled.div `
     h1 {
       color: white;
       font-family: "Lato";
-      font-size: xxx-large;
+      font-size: 18px;
       text-shadow: none;
       text-align: center;
       font-weight: bolder;

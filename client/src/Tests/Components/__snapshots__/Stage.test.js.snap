@@ -10,7 +10,7 @@ exports[`Test Stage Gameover rendering  1`] = `
     className="sc-dkPtRN huOrfL"
   >
     <div
-      className="sc-hKwDye ghkHuY"
+      className="sc-hKwDye LoZPU"
     >
       <img
         data-testid="gameOver-Won-img"

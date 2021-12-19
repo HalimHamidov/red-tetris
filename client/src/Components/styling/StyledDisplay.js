@@ -14,7 +14,7 @@ export const Styledisplay = styled.div`
   font-size: 0.8 rem;
   position: relative;
   width: 150px;
-  height: 92px;
+  height: 70px;
   justify-content: center;
   align-items: center;
   padding-top: 20px;
@@ -102,16 +102,16 @@ export const StyleStage = styled.div`
   padding: 10px;
   @media screen and (min-width: 2048px) {
     display: grid;
-    grid-template-rows: repeat( 3, calc(130px / 4));
-    grid-template-columns: repeat(4, calc(130px / 4));
-    grid-gap: 1px;
+    grid-template-rows: repeat( 3, calc(110px / 5));
+    grid-template-columns: repeat(4, calc(110px / 5));
+    grid-gap: 2px;
     padding: 10px;
   }
   @media screen and (max-width: 768px) {
     display: grid;
-    grid-template-rows: repeat( 3, calc(130px / 4));
-    grid-template-columns: repeat(4, calc(130px / 4));
-    grid-gap: 1px;
+    grid-template-rows: repeat( 3, calc(110px / 5));
+    grid-template-columns: repeat(4, calc(110px / 5));
+    grid-gap: 2px;
     padding: 10px;
   }
   @media screen and (max-width: 480px) {
