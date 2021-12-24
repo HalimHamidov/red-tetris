@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ac956c68.chunk.css",
+    "main.js": "/static/js/main.a9a09e7e.chunk.js",
+    "main.js.map": "/static/js/main.a9a09e7e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.6eafec27.js",
+    "runtime-main.js.map": "/static/js/runtime-main.6eafec27.js.map",
+    "static/css/2.cefb4960.chunk.css": "/static/css/2.cefb4960.chunk.css",
+    "static/js/2.0e1ae2bf.chunk.js": "/static/js/2.0e1ae2bf.chunk.js",
+    "static/js/2.0e1ae2bf.chunk.js.map": "/static/js/2.0e1ae2bf.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.cefb4960.chunk.css.map": "/static/css/2.cefb4960.chunk.css.map",
+    "static/css/main.ac956c68.chunk.css.map": "/static/css/main.ac956c68.chunk.css.map",
+    "static/js/2.0e1ae2bf.chunk.js.LICENSE.txt": "/static/js/2.0e1ae2bf.chunk.js.LICENSE.txt",
+    "static/media/Gameover.4ce9fc00.jpeg": "/static/media/Gameover.4ce9fc00.jpeg",
+    "static/media/Tetris-Founder.3c5b5893.png": "/static/media/Tetris-Founder.3c5b5893.png",
+    "static/media/pop.3397007d.mp3": "/static/media/pop.3397007d.mp3",
+    "static/media/App.css": "/static/media/room19.17409b46.jpeg",
+    "static/media/tetriminos.24b50935.mp3": "/static/media/tetriminos.24b50935.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6eafec27.js",
+    "static/css/2.cefb4960.chunk.css",
+    "static/js/2.0e1ae2bf.chunk.js",
+    "static/css/main.ac956c68.chunk.css",
+    "static/js/main.a9a09e7e.chunk.js"
+  ]
+}

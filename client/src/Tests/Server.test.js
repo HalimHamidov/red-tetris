@@ -1,34 +1,45 @@
-import { socket } from "../hooks";
+import { socket } from "../hooks/socket";
 import helpers from "../../../server/src/helpers";
-
 describe("Server Test ", () => {
-    test("Start Game", () => {
-        socket.emit("Start the tetris");
-        socket.on("Start the tetris", (result) => expect(result.length).toBe(16));
+  test("Start Game", () => {
+    socket.emit("start game");
+    socket.on("start game", (res) => expect(res.length).toBe(10));
+  });
+  test("should Joinroom", () => {
+    socket.emit("joinRoom", { user: "test", room: "ROOM", mode: "Solo" });
+    socket.on("TOASTIFY", (res) => {
+      expect(res.message).toContain("Created room!");
     });
+    socket.emit("joinRoom", { user: "test2", room: "ROOM" });
+    socket.on("TOASTIFY", (res) => {
+      expect(res.message).toContain("Username Already existe");
+    });
+    socket.disconnect()
+  });
 
-    test("Test new tetrominos", () => {
-        socket.emit("new tetrominos");
-        socket.on("new tetrominos", (res) => expect(result.length).toBe(14));
+  test("New tetriminos", () => {
+    socket.emit("new_tetriminos");
+    socket.on("new_tetriminos", (res) => expect(res.length).toBe(10));
+  });
+  test("Stage", () => {
+    let tmp = {
+      stage: [],
+      user: "TEST7855421",
+      room: "RED___ROOM",
+      players: [],
+    };
+    socket.emit("Stage", {
+      stage: [],
+      user: "TEST7855421",
+      room: "RED___ROOM",
+      players: [],
     });
-
-    test("Test Stage", () => {
-        let temp = {
-            stage: [],
-            user: "TEST8",
-            room: "RED_TETRIS_ROOM",
-            players: [],
-        };
-        socket.emit("Stage", {
-            stage: [],
-            user: "TEST8",
-            room: "RED_TETRIS_ROOM",
-            players: [],
-        });
-        socket.on("Stage", (result) => expect(result).toBe(temp));
-    });
-    test("Test user and room validation", () => {
-        expect(helpers.validateName("TETRIS")).toBeTruthy();
-        expect(helpers.validateName("")).toBeFalsy();
-    });
+    socket.on("Stage", (res) => expect(res).toBe(tmp));
+    socket.disconnect()
+  });
+  test("Validate user & room", () => {
+    expect(helpers.validateName("")).toBeFalsy();
+    expect(helpers.validateName("./*")).toBeFalsy();
+    expect(helpers.validateName("TEST")).toBeTruthy();
+  });
 });

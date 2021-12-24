@@ -46,10 +46,10 @@ describe("Rooms", () => {
         <Rooms />
       </Provider>
     );
-    const roomInput = getByPlaceholderText(/Enter Room name/);
+    const roomInput = getByPlaceholderText(/Type your Room Name/);
 
     fireEvent.change(roomInput, { target: { value: "" } });
-    fireEvent.click(getByText(/Submit/));
+    fireEvent.click(getByText(/START/));
 
     const errMsg =
       "[ERROR] Player and Room names must be 1 to 12 alphanumeric characters in length";
@@ -66,10 +66,10 @@ describe("Rooms", () => {
         <Rooms />
       </Provider>
     );
-    const roomInput = getByPlaceholderText(/Enter Room name/);
+    const roomInput = getByPlaceholderText(/Type your Room Name/);
 
     fireEvent.change(roomInput, { target: { value: "testRoom" } });
-    fireEvent.click(getByText(/Submit/));
+    fireEvent.click(getByText(/START/));
     expect(useDispatchMock).toHaveBeenCalled();
     global.window = Object.create(window);
     const url = "#testRoom[testUser]";

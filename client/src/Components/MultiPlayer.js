@@ -272,7 +272,7 @@ const Tetris = () => {
                               }
                               user={row.user}
                               score={row.score}
-                              rows={row.linesCompleted}
+                              // rows={row.linesCompleted}
                             />
                           </Col>
                         ) : (

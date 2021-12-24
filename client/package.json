@@ -32,8 +32,8 @@
         "start": "react-scripts start",
         "build": "react-scripts build",
         "eject": "react-scripts eject",
-        "test": "react-scripts test --env=jsdom --verbose=false --detectOpenHandles",
-        "coverage": "react-scripts test --env=jsdom --coverage CI=true"
+        "test": "react-scripts test --env=jsdom --verbose=false --detectOpenHandles--env=jsdom --verbose=false --detectOpenHandles",
+        "cov": "react-scripts test --env=jsdom --coverage --watchAll --runInBand --detectOpenHandles"
     },
     "browserslist": {
         "production": [
