@@ -27,10 +27,13 @@ CI=true npm test
 CI=true npm run build
 npm test -- --coverage
 
+https://stackoverflow.com/questions/52164025/onsenui-uncaught-referenceerror-setimmediate-is-not-defined
 
 KeyCodes:
 https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode
 
+
+eferenceError: setImmediate is not defined at XMLHttpRequest.dispatchEven
 Making setInterval Declarative with React Hooks- Dan Abramov
 https://overreacted.io/making-setinterval-declarative-with-react-hooks/
 
