@@ -23,6 +23,9 @@ http://blogs.longwin.com.tw/lifetype/key_codes.html
 
 ./node_modules/.bin/jest --watchAll
 
+CI=true npm test
+CI=true npm run build
+npm test -- --coverage
 
 
 KeyCodes:
