@@ -8,9 +8,10 @@ test("App render test ", () => {
 });
 test("Player Won ", () => {
             const { findByText, getByTestId } = render( < GameOver player = {
-                    { lost: false, admin: true } }
+                    { lost: false, admin: true }
+                }
                 />);
-                expect(getByTestId("gameOver-Won-img")).toBeTruthy(); 
+                expect(getByTestId("gameOver-Won-img")).toBeTruthy();
                 const msg = "You Won"
                 expect(findByText(msg)).toBeDefined();
             });
