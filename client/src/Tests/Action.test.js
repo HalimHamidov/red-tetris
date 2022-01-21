@@ -35,14 +35,14 @@ describe("actions Rooms", () => {
         };
         expect(nextpiece(text)).toEqual(expectedAction);
     });
-    // it("change Room name", () => {
-    //     const text = "test";
-    //     const expectedAction = {
-    //         type: UPDATE_NAME,
-    //         data: text,
-    //     };
-    //     expect(updatename(text)).toEqual(expectedAction);
-    // });
+    it("change Room name", () => {
+        const text = "test";
+        const expectedAction = {
+            type: UPDATE_NAME,
+            data: text,
+        };
+        expect(updatename(text)).toEqual(expectedAction);
+    });
 });
 
 describe("Actions Player", () => {
@@ -63,15 +63,15 @@ describe("Actions Player", () => {
         expect(updateplayer(text)).toEqual(expectedAction);
     });
     // it.only("Lost player", () => {
-    //   const text = { user: "test", score: 0 };
-    //   const expectedAction = {
-    //     type: UPDATE_PLAYER,
-    //     data: text,
-    //   };
+    //     const text = { user: "test", score: 0 };
+    //     const expectedAction = {
+    //         type: UPDATE_PLAYER,
+    //         data: text,
+    //     };
 
 
-    //     //   // expect(playerLost(text)).toEqual(expectedAction);
-    //     // });
+    //     expect(playerLost(text)).toEqual(expectedAction);
+    // });
 });
 
 describe("Actions Players", () => {
