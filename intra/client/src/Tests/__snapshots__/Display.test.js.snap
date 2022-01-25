@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Display rendering 1`] = `
+<div
+  className="sc-bdvvtL epyCWs"
+>
+  <div
+    className="sc-dkPtRN fdlklY"
+  />
+  <div
+    className="sc-hKwDye jjPGBA"
+  />
+</div>
+`;
+
+exports[`Test Display title rendering 1`] = `
+<div
+  className="sc-bdvvtL gQorsJ"
+>
+  <div
+    className="sc-dkPtRN fdlklY"
+  >
+    tetris
+  </div>
+  <div
+    className="sc-hKwDye jjPGBA"
+  />
+</div>
+`;
+
+exports[`Test data rendering 1`] = `
+<div
+  className="sc-bdvvtL epyCWs"
+>
+  <div
+    className="sc-dkPtRN fdlklY"
+  >
+    tetris
+  </div>
+  <div
+    className="sc-hKwDye jjPGBA"
+  >
+    0
+  </div>
+</div>
+`;
