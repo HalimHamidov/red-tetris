@@ -29,3 +29,10 @@ if (!global.setImmediate) {
 
 
 https://devhints.io/jest
+
+* <App.js>
+        <p>Good luck, {State.player.username}!</p>
+        
+* tetrominos.js
+
+    P: { color: "237, 17, 42",}
