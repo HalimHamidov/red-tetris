@@ -28,4 +28,33 @@ if (!global.setImmediate) {
 }
 
 
+
+ Resources:
+
+ https://www.youtube.com/watch?v=ZGOaCxX8HIU
+
+ https://github.com/weibenfalk/react-hooks-tetris/blob/master/src/gameHelpers.js
+
+
+Applying Artificial Intelligence to Nintendo Tetris
+
+https://meatfighter.com/nintendotetrisai/
+
+
+
+AI BREAKS NES TETRIS! - 102 MILLION and level 237
+
+https://www.youtube.com/watch?v=l_KY_EwZEVA
+
+https://github.com/GregoryCannon/StackRabbit
+
+
+GENERAL OUTLOOK! 
+
+https://docusaurus.io/docs
+
+https://opensource.fb.com/projects
+
+https://devhints.io/jest
+
 https://devhints.io/jest
