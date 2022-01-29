@@ -25,7 +25,7 @@ function App() {
         }}
         style={{ cursor: "pointer" }}
       >
-        Red Tetris{" "}
+        Red Tetris <p> Good luck!{State.player.username} </p>{" "}
       </h1>{" "}
       <ToastContainer />{" "}
       {State.player.username === "" ? (
